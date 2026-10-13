@@ -1,18 +1,43 @@
-.git
-.env
-.DS_Store
-airflow_settings.yaml
+# Python
 __pycache__/
-astro
-.venv
-.astro/standalone/
-.astro/worktrees/
-airflow-webserver.pid
-webserver_config.py
-airflow.cfg
-airflow.db
-.astro/*.local.yml
-.astro/*.local.yaml
+*.py[cod]
+.venv/
+venv/
+ai/
 
-**/.astro/dbt_metadata.json
-**/.astro/manifest.slim.json
+# Environment secrets
+.env
+.env.*
+
+# Airflow and logs
+logs/
+.airflowignore
+
+# dbt generated files
+dbt/crm_sales/target/
+dbt/crm_sales/logs/
+dbt/crm_sales/dbt_packages/
+
+# Local database
+*.duckdb
+*.duckdb.wal
+
+# IDE
+.vscode/
+
+# dbt generated files
+dbt/crm_sales/target/
+dbt/crm_sales/logs/
+dbt/crm_sales/dbt_packages/
+
+# Local database
+include/*.duckdb
+include/*.duckdb.wal
+
+# Secrets and local configuration
+.env
+.env.*
+dbt/crm_sales/target/
+dbt/crm_sales/logs/
+include/*.duckdb
+
