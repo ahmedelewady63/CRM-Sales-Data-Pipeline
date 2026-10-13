@@ -1,0 +1,13 @@
+crm_sales:
+
+  target: dev
+
+  outputs:
+
+    dev:
+
+      type: duckdb
+
+      path: /usr/local/airflow/include/crm_sales.duckdb
+
+      threads: 4

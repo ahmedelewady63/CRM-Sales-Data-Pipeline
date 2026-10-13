@@ -1,0 +1,24 @@
+name: 'crm_sales'
+
+version: '1.0.0'
+
+profile: 'crm_sales'
+
+model-paths: ["models"]
+
+target-path: "target"
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  crm_sales:
+
+    staging:
+      +schema: stg
+      +materialized: view
+
+    marts:
+      +schema: dwh
+      +materialized: table

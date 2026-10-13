@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+
+  - name: ods
+    schema: ods
+
+    tables:
+
+      - name: accounts
+
+      - name: products
+
+      - name: sales_teams
+
+      - name: sales_pipeline

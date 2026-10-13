@@ -1,0 +1,50 @@
+version: 2
+
+models:
+
+  - name: dim_account
+    columns:
+      - name: account_key
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_product
+    columns:
+      - name: product_key
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_sales_agent
+    columns:
+      - name: sales_agent_key
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_deal_stage
+    columns:
+      - name: deal_stage_key
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_date
+    columns:
+      - name: date_key
+        tests:
+          - unique
+          - not_null
+
+  - name: fact_sales_pipeline
+    columns:
+
+      - name: sales_key
+        tests:
+          - unique
+          - not_null
+
+      - name: opportunity_id
+        tests:
+          - not_null
